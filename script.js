@@ -1,3 +1,6 @@
+
+   
+
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
 const sound = document.getElementById("sound");
@@ -10,20 +13,25 @@ btn.addEventListener("click", () => {
         .then((data) => {
             console.log(data);
             result.innerHTML = `
-            <div class="word">
-                    <h3>${inpWord}</h3>
+              
+            <div class="word" style="background-color:red; border-radius:10px;">
+                
+                    <h3 style="margin-left:82px;">${inpWord}</h3>
                     <button onclick="playSound()">
                         <i class="fas fa-volume-up"></i>
                     </button>
                 </div>
                 <div class="details">
+                   
                     <p>${data[0].meanings[0].partOfSpeech}</p>
                     <p>/${data[0].phonetic}/</p>
                 </div>
+                <h2>meaning:</h2>
                 <p class="word-meaning">
                    ${data[0].meanings[0].definitions[0].definition}
                 </p>
                 <p class="word-example">
+                   
                     ${data[0].meanings[0].definitions[0].example || ""}
                 </p>`;
             sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
