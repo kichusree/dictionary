@@ -34,6 +34,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+   
 }
 .search-box input {
     padding: 5px;
@@ -42,6 +43,7 @@ body {
     outline: none;
     border-bottom: 3px solid #ae9cff;
     font-size: 16px;
+
 }
 .search-box button {
     padding: 15px 0;
@@ -50,7 +52,7 @@ body {
     border: none;
     outline: none;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 /* .search-button :hover{
    background-color:greenyellow;
